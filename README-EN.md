@@ -7,7 +7,7 @@ There is a [known issue on Windows earlier than Server 2008 R2 SP1](http://suppo
 
 The problem is especially serious on 32 bit systems, since adding more memory to the system will not improve the situation; all available memory addresses will be taken by the system file cache.
 
-**__For example, you may not be able to complete a conversion of a large 4D database.__**
+**_For example, you may not be able to complete a conversion of a large 4D database._**
 
 One way to solve this issue is to use [SetSystemFileCacheSize](http://msdn.microsoft.com/en-us/library/aa965240(VS.85).aspx) and impose a limit on the amount of memory the system file cache can consume.
 
