@@ -18,22 +18,22 @@ The problem should be solved as of Windows Server 2008 R2 SP1. In addition, ther
 
 This program is mainly intended for users running a large database application on systems before Windows Server 2008 R2, and having the kind of problems described above.
 
-**関連記事**
-http://blogs.technet.com/b/askcorejp/archive/2009/12/29/1-64bit.aspx
+**Related article**
+http://serverfault.com/questions/325277/windows-server-2008-r2-metafile-ram-usage/527466#527466
 
 Example
 -------
-コマンドプロンプト（windows/system32/cmd.exe）に対するショートカットをデスクトップなどに作成します。
+Create a shortcut to the Command Prompt（windows/system32/cmd.exe）on the Desktop or some other location.
 
-作成したショートカットを右クリックし，『管理者として実行』します。
+Right-click the shortcut and "Run as Administrator".
 
-コマンドプロンプトより，file_cache_toolを実行します。
+Run file_cache_tool from the command line.
 
-**オプション**
--m 最大値を設定する（ある程度のサイズでないと87エラーが返されます。）
--n 最小値を設定する（0はデフォルト値になります。）
--i 現在の値を確認することができます
--l システムファイルキャッシュのフラッシュを実行します
+**Options**
+* -m Set the maximum size (may return error 87 if the size is too small)
+* -n Set the minimum size (0 will result in the default value)
+* -i Check current values
+* -l Flush the system file cache
 
 ![](images/1.png)
 
