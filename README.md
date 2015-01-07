@@ -19,3 +19,14 @@ Windows Server 2008 R2 SP1よりも前のバージョンでは，[システム�
 
 **関連記事**
 http://blogs.technet.com/b/askcorejp/archive/2009/12/29/1-64bit.aspx
+
+Example
+-------
+コマンドプロンプト（windows/system32/cmd.exe）に対するショートカットをデスクトップなどに作成します。
+
+作成したショートカットを右クリックし，『管理者として実行』します。
+
+コマンドプロンプトより，file_cache_toolを実行します。
+
+**オプション**
+
