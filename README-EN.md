@@ -1,21 +1,22 @@
 # console-file-cache-tool
-コマンドラインからシステムファイルキャッシュサイズを操作するためのプログラムです。
+A Windows console program to raed and write the system file cache size limits.
 
 About
 -----
-Windows Server 2008 R2 SP1よりも前のバージョンでは，[システムファイルキャッシュが物理メモリの大部分を占有](http://support.microsoft.com/kb/976618)してしまい，アプリケーションのパフォーマンスに深刻な影響を及ぼすことがあります。
+There is a [known issue on Windows earlier than Server 2008 R2 SP1](http://support.microsoft.com/kb/976618), where the system file cache could consume so much physical memory that other running applications could experience severe cosequences.
 
-特に32ビット版のWindowsでは，たとえマシンに潤沢なメモリが搭載されていたとしても，アドレス範囲に限界があるため，おおきなファイルに対してアクセスをしなければならないデータベースのようなアプリケーションの実行に支障が生じるかもしれません。
+The problem is especially serious on 32 bit systems, since adding more memory to the system will not improve the situation; all available memory addresses will be taken by the system file cache.
 
-問題を回避するためには，[SetSystemFileCacheSize](http://msdn.microsoft.com/en-us/library/aa965240(VS.85).aspx)を使用し，システムファイルキャッシュが占有できるメモリに制限を設けることが提案されています。
+For example, you may not be able to complete a conversion of a large 4D database.
 
-このコマンドラインプログラムは，システムファイルキャッシュのサイズ制限を読み書きするためのものです。
+One way to solve this issue is to use [SetSystemFileCacheSize](http://msdn.microsoft.com/en-us/library/aa965240(VS.85).aspx) and impose a limit on the amount of memory the system file cache can consume.
 
-**注記**
+This console program is designed to let you do just that from the command-line.
 
-この問題は，Windows 2008 R2 SP1で改善されました。また，Windows 7およびWindows 2008 R2には，[修正プログラム](http://support.microsoft.com/kb/979149)が存在します。
+**Note**
+The problem should be solved as of Windows Server 2008 R2 SP1. In addition, there is a [fix] (http://support.microsoft.com/kb/979149) for Windows 7 and Windows 2008 R2.
 
-プログラムは，おもにWindows Server 2008 R2 SP1よりも前のバージョンでデータベースのようなおおきなファイルを使用しており，上述したような問題に遭遇している人を対象にしています。
+This program is mainly intended for users running a large database application on systems before Windows Server 2008 R2, and having the kind of problems described above.
 
 **関連記事**
 http://blogs.technet.com/b/askcorejp/archive/2009/12/29/1-64bit.aspx
