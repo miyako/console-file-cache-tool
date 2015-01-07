@@ -1,5 +1,5 @@
 # console-file-cache-tool
-A Windows console program to raed and write the system file cache size limits.
+A Windows console program to read and write the system file cache size limits.
 
 About
 -----
