@@ -13,7 +13,7 @@ Windows Server 2008 R2 SP1よりも前のバージョンでは，[システム�
 
 **注記**
 
-この問題は，Windows 2008 R2 SP1で改善されました。また，Windows 7およびWindows 2008 R2には，[修正プログラム](http://support.microsoft.com/kb/979149)が存在します。
+この問題は，Windows Server 2008 R2 SP1で改善されました。また，Windows 7およびWindows 2008 R2には，[修正プログラム](http://support.microsoft.com/kb/979149)が存在します。
 
 プログラムは，おもにWindows Server 2008 R2 SP1よりも前のバージョンでデータベースのようなおおきなファイルを使用しており，上述したような問題に遭遇している人を対象にしています。
 
