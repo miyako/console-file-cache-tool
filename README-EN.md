@@ -14,6 +14,7 @@ One way to solve this issue is to use [SetSystemFileCacheSize](http://msdn.micro
 This console program is designed to let you do just that from the command-line.
 
 **Note**
+
 The problem should be solved as of Windows Server 2008 R2 SP1. In addition, there is a [fix] (http://support.microsoft.com/kb/979149) for Windows 7 and Windows 2008 R2.
 
 This program is mainly intended for users running a large database application on systems before Windows Server 2008 R2, and having the kind of problems described above.
