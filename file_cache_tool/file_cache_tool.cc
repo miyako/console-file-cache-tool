@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
         }
     } 
     
-	return 0;
+    return 0;
 }
 
 void setMin(unsigned int min){
@@ -94,10 +94,13 @@ void getInfo(){
 }
 
 void flush(){
-    if(!SetSystemFileCacheSize(-1, -1, 0)){
-        fprintf(stderr, "SetSystemFileCacheSize error: %lu\n", GetLastError()); 
-        errorInfo();
-    }    
+    if (SetPrivilege(SE_INCREASE_QUOTA_NAME)) {
+
+        if(!SetSystemFileCacheSize(-1, -1, 0)){
+            fprintf(stderr, "SetSystemFileCacheSize error: %lu\n", GetLastError());
+            errorInfo();
+        }
+    }
 }
 
 static void errorInfo(){
