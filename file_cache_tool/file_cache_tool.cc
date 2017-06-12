@@ -4,7 +4,7 @@ extern char *optarg;
 extern int optind, opterr;
 
 static void usage(void){
-    fprintf(stderr, "usage: unzip [options]\n");
+    fprintf(stderr, "usage: file_cache_tool [options]\n");
     fprintf(stderr, " -%c number: %s\n", OPT_SET_MAX , "set max size (KiB) ex. 16384"); 
     fprintf(stderr, " -%c number: %s\n", OPT_SET_MIN , "set min size (KiB) ex. 83"); 
     fprintf(stderr, " -%c: %s\n", OPT_GET_INFO , "get info");     
